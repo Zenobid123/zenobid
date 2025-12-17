@@ -1,4 +1,5 @@
 import { Linkedin, Twitter, Mail } from "lucide-react";
+import zenobidLogo from "@/assets/zenobid-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -35,8 +36,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="#" className="font-display text-2xl font-bold text-foreground inline-block mb-4">
-              Zeno<span className="text-gradient">bid</span>
+            <a href="#" className="inline-block mb-4">
+              <img src={zenobidLogo} alt="Zenobid" className="h-10 w-auto" />
             </a>
             <p className="text-muted-foreground mb-6 max-w-xs">
               The Procurement Operating System for construction and manufacturing companies.

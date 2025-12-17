@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import zenobidLogo from "@/assets/zenobid-logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,8 +29,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="font-display text-2xl font-bold text-foreground">
-          Zeno<span className="text-gradient">bid</span>
+        <a href="#">
+          <img src={zenobidLogo} alt="Zenobid" className="h-10 w-auto" />
         </a>
 
         {/* Desktop Navigation */}
