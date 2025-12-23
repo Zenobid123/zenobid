@@ -7,7 +7,7 @@ import {
   Clock, 
   AlertTriangle,
   XCircle,
-  TrendingDown
+  TrendingUp
 } from "lucide-react";
 
 const problems = [
@@ -20,7 +20,7 @@ const problems = [
 ];
 
 const painPoints = [
-  { icon: TrendingDown, text: "High procurement costs", color: "text-destructive" },
+  { icon: TrendingUp, text: "High procurement costs", color: "text-destructive" },
   { icon: XCircle, text: "Scattered, unstructured data", color: "text-destructive" },
   { icon: AlertTriangle, text: "Thousands of unmanaged suppliers", color: "text-destructive" },
   { icon: Clock, text: "Delays and accountability gaps", color: "text-destructive" },
