@@ -109,8 +109,20 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Company Details */}
+        <div className="mt-12 pt-8 border-t border-border/50">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm text-muted-foreground">
+            <p>
+              <span className="font-medium text-foreground">Address:</span> 2114-17, Tower 4, DLF Corporate Greens, Sector 74A, Gurugram, Haryana, 122004
+            </p>
+            <p>
+              <span className="font-medium text-foreground">GSTIN:</span> 06AABCQ1471H1ZM
+            </p>
+          </div>
+        </div>
+
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-8 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Zenobid. All rights reserved.
           </p>
