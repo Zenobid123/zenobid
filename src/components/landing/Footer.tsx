@@ -113,6 +113,9 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm text-muted-foreground">
             <p>
+              <span className="font-medium text-foreground">Registered Name:</span> Quantumproc Systems Private Limited
+            </p>
+            <p>
               <span className="font-medium text-foreground">Address:</span> 2114-17, Tower 4, DLF Corporate Greens, Sector 74A, Gurugram, Haryana, 122004
             </p>
             <p>
