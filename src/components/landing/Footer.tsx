@@ -1,4 +1,5 @@
-import { Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Facebook, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import zenobidLogo from "@/assets/zenobid-logo.png";
 
 const Footer = () => {
@@ -24,8 +25,8 @@ const Footer = () => {
       { label: "Status", href: "#" },
     ],
     legal: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
+      { label: "Privacy Policy", href: "/privacy-policy", isRoute: true },
+      { label: "Terms of Service", href: "/terms-and-conditions", isRoute: true },
       { label: "Security", href: "#" },
     ],
   };
@@ -43,13 +44,13 @@ const Footer = () => {
               The Procurement Operating System for construction and manufacturing companies.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+              <a href="https://www.linkedin.com/company/zenobidprocurement/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
                 <Linkedin className="w-5 h-5 text-muted-foreground" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
-                <Twitter className="w-5 h-5 text-muted-foreground" />
+              <a href="https://www.facebook.com/people/Zenobid/61586269254783/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+                <Facebook className="w-5 h-5 text-muted-foreground" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+              <a href="mailto:info@zenobid.com" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
                 <Mail className="w-5 h-5 text-muted-foreground" />
               </a>
             </div>
@@ -100,9 +101,15 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {link.label}
-                  </a>
+                  {link.isRoute ? (
+                    <Link to={link.href} className="text-muted-foreground hover:text-foreground transition-colors">
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className="text-muted-foreground hover:text-foreground transition-colors">
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
