@@ -47,10 +47,10 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/zenobidprocurement/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
                 <Linkedin className="w-5 h-5 text-muted-foreground" />
               </a>
-              <a href="https://www.facebook.com/people/Zenobid/61586269254783/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61586269254783" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
                 <Facebook className="w-5 h-5 text-muted-foreground" />
               </a>
-              <a href="mailto:info@zenobid.com" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+              <a href="mailto:info@zenobid.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
                 <Mail className="w-5 h-5 text-muted-foreground" />
               </a>
             </div>
