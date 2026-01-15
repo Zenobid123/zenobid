@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import DemoFormDialog from "./DemoFormDialog";
 
 const CTASection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [demoDialogOpen, setDemoDialogOpen] = useState(false);
+  const [howItWorksDialogOpen, setHowItWorksDialogOpen] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -59,11 +62,11 @@ const CTASection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="xl" className="group" onClick={() => setDemoDialogOpen(true)}>
               Book a Demo
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="heroOutline" size="xl" className="group">
+            <Button variant="heroOutline" size="xl" className="group" onClick={() => setHowItWorksDialogOpen(true)}>
               <Play size={18} className="mr-1" />
               See How Zenobid Works
             </Button>
@@ -86,6 +89,18 @@ const CTASection = () => {
           </div>
         </div>
       </div>
+
+      {/* Demo Form Dialogs */}
+      <DemoFormDialog 
+        open={demoDialogOpen} 
+        onOpenChange={setDemoDialogOpen} 
+        title="Book a Demo" 
+      />
+      <DemoFormDialog 
+        open={howItWorksDialogOpen} 
+        onOpenChange={setHowItWorksDialogOpen} 
+        title="See How Zenobid Works" 
+      />
     </section>
   );
 };

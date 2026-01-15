@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import DemoFormDialog from "./DemoFormDialog";
 
 const HeroSection = () => {
+  const [demoDialogOpen, setDemoDialogOpen] = useState(false);
+  const [howItWorksDialogOpen, setHowItWorksDialogOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
@@ -43,11 +48,11 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="xl" className="group" onClick={() => setDemoDialogOpen(true)}>
               Book a Demo
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="heroOutline" size="xl" className="group">
+            <Button variant="heroOutline" size="xl" className="group" onClick={() => setHowItWorksDialogOpen(true)}>
               <Play size={18} className="mr-1" />
               See How Zenobid Works
             </Button>
@@ -74,6 +79,18 @@ const HeroSection = () => {
 
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+
+      {/* Demo Form Dialogs */}
+      <DemoFormDialog 
+        open={demoDialogOpen} 
+        onOpenChange={setDemoDialogOpen} 
+        title="Book a Demo" 
+      />
+      <DemoFormDialog 
+        open={howItWorksDialogOpen} 
+        onOpenChange={setHowItWorksDialogOpen} 
+        title="See How Zenobid Works" 
+      />
     </section>
   );
 };
