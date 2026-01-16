@@ -10,31 +10,17 @@ const Footer = () => {
       { label: "Features", href: "#solution" },
       { label: "Benefits", href: "#benefits" },
       { label: "Industries", href: "#industries" },
-      { label: "Pricing", href: "#" },
-    ],
-    company: [
-      { label: "About Us", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Contact", href: "#" },
-    ],
-    resources: [
-      { label: "Documentation", href: "#" },
-      { label: "API", href: "#" },
-      { label: "Support", href: "#" },
-      { label: "Status", href: "#" },
     ],
     legal: [
       { label: "Privacy Policy", href: "/privacy-policy", isRoute: true },
       { label: "Terms of Service", href: "/terms-and-conditions", isRoute: true },
-      { label: "Security", href: "#" },
     ],
   };
 
   return (
     <footer className="relative border-t border-border/50">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#" className="inline-block mb-4">
@@ -70,31 +56,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
