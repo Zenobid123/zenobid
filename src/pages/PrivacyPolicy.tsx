@@ -5,7 +5,6 @@ import zenobidLogo from "@/assets/zenobid-logo.png";
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="border-b border-border/50 sticky top-0 bg-background/95 backdrop-blur z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
@@ -18,7 +17,6 @@ const PrivacyPolicy = () => {
         </div>
       </header>
 
-      {/* Content */}
       <main className="container mx-auto px-6 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
 
@@ -29,13 +27,16 @@ const PrivacyPolicy = () => {
 
           <h2 className="text-2xl font-semibold mt-8">Acquisition or Collection of Personal Data</h2>
           <p className="text-muted-foreground">
-            When you access / use the features of the Zenobid application, you directly or indirectly have provided personal data to us. We collect your personal data in the following ways:
+            When you access / use the features of the Zenobid application, you directly or indirectly have provided personal data to us.
+          </p>
+          <p className="text-muted-foreground">
+            We collect your personal data in the following ways.
           </p>
           <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-            <li>When you / your co-workers you have given permission for your personal data covers name, NIK, email, telephone and other information that have been agreed to be registered into the Zenobid system in order to own the account used to access the Zenobid application.</li>
-            <li>Transaction data that has been entered into the Zenobid application.</li>
-            <li>Files in the form of photos, documents or others that you have uploaded through the features of Zenobid application.</li>
-            <li>Record time, IP, Device on every activity you do on the Zenobid application.</li>
+            <li>When you / your co-workers have given permission for your personal data covers name, NIK, email, telephone and other information that have been agreed to be registered into the Zenobid system in order to own the account used to access the Zenobid application.</li>
+            <li>Transaction data that has been entered into the Zenobid application</li>
+            <li>Files in the form of photos, documents or others that you have uploaded through the features of Zenobid application</li>
+            <li>Record time, IP, Device on every activity you do on the Zenobid application</li>
           </ul>
 
           <p className="text-muted-foreground mt-4">
@@ -43,7 +44,7 @@ const PrivacyPolicy = () => {
           </p>
 
           <p className="text-muted-foreground mt-4">
-            We reserve the right from time to time to request authentication, verification and/or updates Your Personal Data, so that your data and information is accurate, complete and up-to-date, including temporarily/permanently suspending or not allowing you to access certain features in case you haven't authenticated and upgraded data your personal.
+            We reserve the right from time to time to request authentication, verification and/or updates of your Personal Data, so that your data and information is accurate, complete and up-to-date, including temporarily/permanently suspending or not allowing you to access certain features in case you haven't authenticated and upgraded your personal data.
           </p>
 
           <p className="text-muted-foreground mt-4">
@@ -56,12 +57,12 @@ const PrivacyPolicy = () => {
           </p>
           <ul className="list-disc pl-6 text-muted-foreground space-y-2">
             <li>Processing personal data for your needs in accessing/using the features of Zenobid application</li>
-            <li>Presenting transaction data information to users in the same sourcing system according to data access policy agreed upon</li>
+            <li>Presenting transaction data information to users in the same sourcing system according to data access policy agreed upon.</li>
           </ul>
 
           <h2 className="text-2xl font-semibold mt-8">Contact Us</h2>
           <p className="text-muted-foreground">
-            You can submit questions, criticisms and suggestions, complaints, or complaints regarding with Personal Data via e-mail <a href="mailto:info@zenobid.com" className="text-primary hover:underline">info@zenobid.com</a>.
+            You can submit questions, criticisms, suggestions and complaints regarding the Personal Data via e-mail <a href="mailto:info@zenobid.com" className="text-primary hover:underline">info@zenobid.com</a>.
           </p>
         </div>
       </main>
