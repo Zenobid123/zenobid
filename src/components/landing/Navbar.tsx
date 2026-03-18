@@ -98,6 +98,15 @@ const Navbar = () => {
                 <Button variant="hero" size="lg" className="w-full" onClick={() => { setDemoDialogOpen(true); setIsMobileMenuOpen(false); }}>
                   Book a Demo
                 </Button>
+                <a
+                  href="https://app.zenobid.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 text-muted-foreground hover:text-foreground transition-colors py-2"
+                >
+                  <User size={18} />
+                  <span className="text-sm font-semibold">LOGIN</span>
+                </a>
               </div>
             </div>
           </div>
