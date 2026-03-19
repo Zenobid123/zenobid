@@ -9,11 +9,11 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Elements */}
+      {/* Background Elements - smaller on mobile */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] animate-glow-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[150px] animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo/5 rounded-full blur-[200px]" />
+        <div className="absolute top-1/4 left-1/4 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-primary/10 rounded-full blur-[150px] animate-glow-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-accent/10 rounded-full blur-[150px] animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
+        <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo/5 rounded-full blur-[200px]" />
       </div>
 
       {/* Grid Pattern */}
