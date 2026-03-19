@@ -2,18 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+/* Fonts loaded via index.html with preconnect for performance */
 
-/* Reduce GPU-heavy blur on mobile for performance */
+/* Reduce GPU-heavy effects on mobile for performance */
 @media (max-width: 768px) {
-  .blur-\[150px\] {
-    filter: blur(60px) !important;
-  }
+  .blur-\[150px\],
   .blur-\[200px\] {
-    filter: blur(80px) !important;
+    filter: blur(40px) !important;
+    opacity: 0.5 !important;
   }
   .animate-glow-pulse {
     animation: none !important;
+  }
+  .backdrop-blur-xl {
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+  .floating-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .card-glow::before {
+    display: none !important;
   }
 }
 
