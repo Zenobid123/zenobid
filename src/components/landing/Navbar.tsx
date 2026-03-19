@@ -68,13 +68,24 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu Button + Login */}
+          <div className="md:hidden flex items-center gap-3">
+            <a
+              href="https://app.zenobid.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-0.5 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <User size={20} />
+              <span className="text-[9px] font-semibold tracking-wide">LOGIN</span>
+            </a>
+            <button
+              className="text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
