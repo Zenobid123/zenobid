@@ -4,6 +4,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
 
+/* Reduce GPU-heavy blur on mobile for performance */
+@media (max-width: 768px) {
+  .blur-\[150px\] {
+    filter: blur(60px) !important;
+  }
+  .blur-\[200px\] {
+    filter: blur(80px) !important;
+  }
+  .animate-glow-pulse {
+    animation: none !important;
+  }
+}
+
 @layer base {
   :root {
     --background: 220 15% 4%;

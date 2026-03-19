@@ -1,12 +1,14 @@
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
-import ProblemSection from "@/components/landing/ProblemSection";
-import SolutionSection from "@/components/landing/SolutionSection";
-import BenefitsSection from "@/components/landing/BenefitsSection";
-import CapabilitiesSection from "@/components/landing/CapabilitiesSection";
-import IndustriesSection from "@/components/landing/IndustriesSection";
-import CTASection from "@/components/landing/CTASection";
-import Footer from "@/components/landing/Footer";
+
+const ProblemSection = lazy(() => import("@/components/landing/ProblemSection"));
+const SolutionSection = lazy(() => import("@/components/landing/SolutionSection"));
+const BenefitsSection = lazy(() => import("@/components/landing/BenefitsSection"));
+const CapabilitiesSection = lazy(() => import("@/components/landing/CapabilitiesSection"));
+const IndustriesSection = lazy(() => import("@/components/landing/IndustriesSection"));
+const CTASection = lazy(() => import("@/components/landing/CTASection"));
+const Footer = lazy(() => import("@/components/landing/Footer"));
 
 const Index = () => {
   return (
@@ -14,14 +16,18 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <ProblemSection />
-        <SolutionSection />
-        <BenefitsSection />
-        <CapabilitiesSection />
-        <IndustriesSection />
-        <CTASection />
+        <Suspense fallback={null}>
+          <ProblemSection />
+          <SolutionSection />
+          <BenefitsSection />
+          <CapabilitiesSection />
+          <IndustriesSection />
+          <CTASection />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
