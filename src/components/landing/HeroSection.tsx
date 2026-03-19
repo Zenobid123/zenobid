@@ -16,9 +16,9 @@ const HeroSection = () => {
         <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo/5 rounded-full blur-[200px]" />
       </div>
 
-      {/* Grid Pattern */}
+      {/* Grid Pattern - hidden on mobile for perf */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="hidden md:block absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
                            linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
